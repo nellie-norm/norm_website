@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro - Nell Norman</title>
+
+  <!-- Cardo font for consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Cardo', Georgia, 'Times New Roman', serif;
+      background: #fff;
+      color: #111;
+      padding: 60px 20px;
+      font-size: 18px;
+      line-height: 1.95;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      letter-spacing: 0.1px;
+    }
+
+    .container {
+      max-width: 900px; /* widened */
+      margin: 0 auto;
+    }
+
+    .back-button {
+      font-size: 15px;
+      color: #777;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 42px;
+      transition: opacity 0.2s ease;
+    }
+
+    .back-button:hover { opacity: 0.6; }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 36px;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+    }
+
+    .content { font-size: 18px; color: #222; line-height: 1.95; }
+
+    .content p {
+      margin-bottom: 26px;
+      max-width: 85ch;
+      text-align: justify;
+    }
+
+    .footnote {
+      font-size: 0.8em;
+      vertical-align: super;
+      text-decoration: none;
+      color: inherit;
+      opacity: 0.65;
+      transition: opacity 0.2s ease;
+    }
+
+    .footnote:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        line-height: 1.85;
+        padding: 40px 16px;
+      }
+
+      h1 { font-size: 30px; }
+
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="about.html" class="back-button">← back</a>
+
+    <h1>introduction</h1>
+
+    <div class="content">
+      <p>
+        This research demonstrates that LLMs, combined with readily available voice synthesis tools, enable fully automated vishing attacks at unprecedented scale and minimal cost. Through the development and evaluation of two proof of concept architectures — a modular pipeline and a Realtime system using OpenAI’s API — I show that the technical barriers to mass voice-based fraud have effectively collapsed. The project encompasses the complete attack lifecycle: from automated victim profiling through to real-time conversational manipulation, revealing that sophisticated vishing no longer requires human operators or specialised expertise.
+      </p>
+
+      <p>
+        Vishing represents an escalating cybersecurity threat, with scammers stealing an estimated $16.6 billion in 2024 alone 
+        <a href="https://www.nbcnews.com/tech/security/fbi-says-online-scams-raked-166-billion-last-year-rcna202358" class="footnote" target="_blank" rel="noopener">[1]</a>. 
+        Unlike text-based phishing, which victims can scrutinise at their own pace, vishing exploits real-time voice interaction to manipulate emotions and establish trust before critical thinking engages 
+        <a href="https://www.ibm.com/think/insights/rise-of-vishing" class="footnote" target="_blank" rel="noopener">[2]</a>. 
+        This threat landscape is being fundamentally transformed by advances in AI. Current LLMs exceed 95% accuracy on reasoning benchmarks that challenged systems just years ago 
+        <a href="https://www.vellum.ai/blog/llm-benchmarks-overview-limits-and-model-comparison" class="footnote" target="_blank" rel="noopener">[3]</a>, 
+        while voice-native architectures now achieve human-like latency and naturalness 
+        <a href="https://openai.com/index/hello-gpt-4o/" class="footnote" target="_blank" rel="noopener">[4]</a>. 
+        The convergence of these capabilities with plummeting costs creates conditions for automated fraud at scales previously unimaginable.
+      </p>
+
+      <p>
+        This work builds upon and extends recent research demonstrating AI’s capacity for social engineering. While Figueiredo et al. establish that LLMs could conduct vishing with manually crafted personas 
+        <a href="https://arxiv.org/abs/2409.13793" class="footnote" title="J. Figueiredo et al. 'On the Feasibility of Fully AI-automated Vishing Attacks', 2024">[5]</a>, 
+        and Toapanta et al. show voice cloning’s effectiveness with static scripts 
+        <a href="https://www.mdpi.com/2673-4591/77/1/15" class="footnote" target="_blank" rel="noopener">[6]</a>, 
+        my research addresses three critical gaps. First, I demonstrate end-to-end automation without human intervention: from data scraping through attack execution. Second, I systematically evaluate mainstream LLM compliance with malicious requests, finding 66–100% success rates with basic prompting. Third, I provide economic analysis showing attacks cost as little as $0.074 per call, making mass deployment financially viable even at low success rates.
+      </p>
+
+      <p>
+        The technical implementation involves two distinct architectures that illustrate different trade-offs in the attack design space. The modular system achieves 4.7-second perceived response latency at minimal cost by orchestrating separate components for speech recognition, LLM processing, and voice synthesis. The Realtime architecture leverages OpenAI’s native voice capabilities to achieve 639ms latency (indistinguishable from human conversation), representing the first documented adversarial use of this API.
+      </p>
+
+      <p>
+        The ethical dimensions of this research warrant explicit acknowledgment. While demonstrating these vulnerabilities creates risks of misuse, the alternative — allowing capabilities to develop in criminal contexts without public awareness — poses greater harm. All testing was conducted entirely by the author, using synthetic data and controlled environments, with no actual victims targeted. By documenting these threats transparently, this research aims to catalyse defensive developments before widespread criminal adoption occurs, recognising that the democratisation of AI capabilities makes prevention through obscurity no longer viable.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
