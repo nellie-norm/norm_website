@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nell Norman</title>
+
+  <!-- Classic, clean serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+    font-family: 'Cardo', Georgia, serif;
+      background:#fff; color:#000; min-height:100vh;
+
+      /* left-of-center layout */
+      display:flex; justify-content:flex-start; align-items:center;
+      padding:40px 20px;
+      padding-left: 25vw;           /* ~quarter page in */
+      font-kerning: normal;
+      font-optical-sizing: auto;
+    }
+
+    .container { width:100%; max-width: 640px; } /* a touch wider for essay feel */
+
+    /* Smaller, understated headings */
+    h1 {
+      font-size: 34px;              /* smaller than before */
+      font-weight: 600;
+      margin-bottom: 42px;
+      letter-spacing: -0.2px;
+      line-height: 1.2;
+    }
+
+    .emoji { margin-left:8px; font-size: 28px; }
+
+    nav { display:flex; flex-direction:column; gap:18px; }
+    nav a {
+      font-size: 20px;              /* smaller nav */
+      font-weight: 500;
+      color:#000; text-decoration:none; display:block;
+      letter-spacing:-0.1px; transition:opacity .2s ease;
+    }
+    nav a:hover { opacity:.65; }
+
+    /* Content sections (hidden by default) */
+    .content { display:none; margin-top:36px; animation:fadeIn .25s ease; }
+    .content.active { display:block; }
+
+    @keyframes fadeIn { from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:translateY(0)} }
+
+    .back-button {
+      font-size: 15px; color:#666; text-decoration:none; display:inline-block;
+      margin-bottom:18px; transition:opacity .2s ease;
+    }
+    .back-button:hover { opacity:.7; }
+
+    .content h2 {
+      font-size: 26px; font-weight:600; margin-bottom: 14px; letter-spacing:-0.1px;
+    }
+
+    /* Essay-like body text */
+    .content p, .blog-excerpt, .contact-info, .blog-post h3, .blog-post a, .blog-date {
+      max-width: 65ch;              /* comfy line length */
+    }
+
+    .content p {
+      font-size: 17px;              /* readable but not big */
+      line-height: 1.8;             /* generous leading */
+      color:#222;
+      margin-bottom: 14px;
+    }
+
+    .blog-post {
+      margin-bottom: 24px; padding-bottom: 24px; border-bottom:1px solid #eee;
+    }
+    .blog-post:last-child { border-bottom:none; }
+    .blog-post h3 { font-size: 20px; font-weight: 600; margin-bottom:6px; }
+    .blog-post h3 a { color:#000; text-decoration:none; }
+    .blog-post h3 a:hover { opacity:.7; }
+    .blog-date { font-size: 12px; color:#666; margin-bottom:10px; }
+    .blog-excerpt { font-size: 16px; line-height: 1.8; color:#333; }
+
+    .contact-info { font-size:16px; line-height:1.8; }
+    .contact-info a { color:#000; transition:opacity .2s ease; }
+    .contact-info a:hover { opacity:.7; }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      body { padding-left: 8vw; }
+      .container { max-width: 92vw; }
+      h1 { font-size: 28px; margin-bottom: 30px; }
+      nav a { font-size: 18px; }
+      .emoji { font-size: 24px; }
+      .content h2 { font-size: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="home">
+      <h1>nell norman <span class="emoji">👋</span></h1>
+      <nav>
+        <a href="./about.html">about</a>
+        <a href="./resume.pdf" target="_blank" rel="noopener">resume</a>
+        <a id="nav-blog" href="./first-blog-post.html">blog</a>
+        <a href="https://twitter.com/nellie_norm" target="_blank" rel="noopener">twitter</a>
+        <a href="https://substack.com/@nellnorman" target="_blank" rel="noopener">substack</a>
+        <a id="nav-contact" href="#contact">contact</a>
+      </nav>
+    </div>
+
+    <!-- Blog Content -->
+    <div id="blog-content" class="content">
+      <a href="#" class="back-button" onclick="hideContent()">← back</a>
+      <h2>blog</h2>
+
+      <div class="blog-post">
+        <h3><a href="./first-blog-post.html">Your First Blog Post Title</a></h3>
+        <div class="blog-date">January 15, 2024</div>
+        <div class="blog-excerpt">
+          This is the opening paragraph of your blog post. It sets the stage for what you're about to discuss and draws the reader in.
+        </div>
+      </div>
+
+      <div class="blog-post">
+        <h3><a href="https://example.com/blog-post-2" target="_blank" rel="noopener">Another Blog Post Title</a></h3>
+        <div class="blog-date">December 20, 2023</div>
+        <div class="blog-excerpt">
+          Another excerpt describing this blog post. Keep it concise but informative.
+        </div>
+      </div>
+
+      <div class="blog-post">
+        <h3><a href="https://medium.com/@yourusername/post-title" target="_blank" rel="noopener">A Medium Article</a></h3>
+        <div class="blog-date">November 10, 2023</div>
+        <div class="blog-excerpt">
+          You can link to posts hosted anywhere - Medium, Dev.to, your own blog, etc.
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Content -->
+    <div id="contact-content" class="content">
+      <a href="#" class="back-button" onclick="hideContent()">← back</a>
+      <h2>contact</h2>
+      <div class="contact-info">
+        <p>Feel free to reach out:</p>
+        <p>Email: <a href="mailto:nellie.norman@gmail.com">nellie.norman@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/nellnorman" target="_blank" rel="noopener">linkedin.com/in/nellnorman</a></p>
+        <p>Twitter: <a href="https://twitter.com/nellie_norm" target="_blank" rel="noopener">@nellie_norm</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContent(section) {
+      document.getElementById('home').style.display = 'none';
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      const selected = document.getElementById(section + '-content');
+      if (selected) selected.classList.add('active');
+    }
+
+    function hideContent() {
+      document.getElementById('home').style.display = 'block';
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+
+    // Back button returns home
+    window.addEventListener('popstate', function () { hideContent(); });
+
+    // Enhance blog/contact to open in-page when JS is active
+    const navBlog = document.getElementById('nav-blog');
+    const navContact = document.getElementById('nav-contact');
+
+    if (navBlog) {
+      navBlog.addEventListener('click', (e) => { e.preventDefault(); showContent('blog'); });
+    }
+    if (navContact) {
+      navContact.addEventListener('click', (e) => { e.preventDefault(); showContent('contact'); });
+    }
+  </script>
+</body>
+</html>
