@@ -15,8 +15,8 @@
 
     body {
       font-family: 'Cardo', Georgia, 'Times New Roman', serif;
-      background: #fff;
-      color: #111;
+      background: #FAF3E0; /* canvas beige */
+      color: #4B3621;      /* rich cocoa brown text */
       padding: 60px 20px;
       font-size: 18px;
       line-height: 1.95;
@@ -26,20 +26,22 @@
     }
 
     .container {
-      max-width: 900px; /* widened */
+      max-width: 900px;
       margin: 0 auto;
     }
 
     .back-button {
       font-size: 15px;
-      color: #777;
+      color: #7A5230; /* slightly lighter warm brown for link */
       text-decoration: none;
       display: inline-block;
       margin-bottom: 42px;
       transition: opacity 0.2s ease;
     }
 
-    .back-button:hover { opacity: 0.6; }
+    .back-button:hover {
+      opacity: 0.6;
+    }
 
     h1 {
       font-size: 40px;
@@ -47,9 +49,13 @@
       margin-bottom: 36px;
       letter-spacing: -0.3px;
       line-height: 1.25;
+      color: #3B2F2F; /* darker heading brown */
     }
 
-    .content { font-size: 18px; color: #222; line-height: 1.95; }
+    .content {
+      font-size: 18px;
+      line-height: 1.95;
+    }
 
     .content p {
       margin-bottom: 26px;
@@ -57,12 +63,23 @@
       text-align: justify;
     }
 
+    a {
+      color: #6B4E3D;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s ease;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+
     .footnote {
       font-size: 0.8em;
       vertical-align: super;
       text-decoration: none;
-      color: inherit;
-      opacity: 0.65;
+      color: #6B4E3D;
+      opacity: 0.7;
       transition: opacity 0.2s ease;
     }
 
@@ -78,9 +95,13 @@
         padding: 40px 16px;
       }
 
-      h1 { font-size: 30px; }
+      h1 {
+        font-size: 30px;
+      }
 
-      .content { font-size: 16px; }
+      .content {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
