@@ -36,7 +36,7 @@
 
     .back-button {
       font-size: 15px;
-      color: #7A5230;
+      color: #CC5500;
       text-decoration: none;
       display: inline-block;
       margin-bottom: 42px;
@@ -84,17 +84,20 @@
     }
 
     .content a {
-      color: #6B4E3D;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-      transition: all 0.2s ease;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
     }
 
     .content a:hover {
-      opacity: 0.75;
+    color: #CC5500; /* burnt orange */
+    text-decoration-color: #CC5500;
+    opacity: 1;
     }
-
+    
     @media (max-width: 900px) {
       body {
         font-size: 16px;
