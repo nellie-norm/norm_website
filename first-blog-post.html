@@ -1,197 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Blog Post - Nell Norman</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            background: #fff;
-            color: #000;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 650px;
-            margin: 0 auto;
-        }
-        
-        .back-button {
-            font-size: 18px;
-            color: #666;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 40px;
-            transition: opacity 0.2s ease;
-        }
-        
-        .back-button:hover {
-            opacity: 0.6;
-        }
-        
-        .post-header {
-            margin-bottom: 40px;
-        }
-        
-        h1 {
-            font-size: 42px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
-        }
-        
-        .post-meta {
-            font-size: 16px;
-            color: #666;
-        }
-        
-        .post-content {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.7;
-        }
-        
-        .post-content p {
-            margin-bottom: 24px;
-        }
-        
-        .post-content h2 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #000;
-        }
-        
-        .post-content h3 {
-            font-size: 22px;
-            font-weight: 500;
-            margin-top: 32px;
-            margin-bottom: 16px;
-            color: #000;
-        }
-        
-        .post-content a {
-            color: #000;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-            transition: opacity 0.2s ease;
-        }
-        
-        .post-content a:hover {
-            opacity: 0.6;
-        }
-        
-        .post-content ul, .post-content ol {
-            margin-bottom: 24px;
-            padding-left: 24px;
-        }
-        
-        .post-content li {
-            margin-bottom: 8px;
-        }
-        
-        .post-content blockquote {
-            border-left: 3px solid #000;
-            padding-left: 20px;
-            margin: 24px 0;
-            font-style: italic;
-            color: #555;
-        }
-        
-        .post-content pre {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 24px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 16px;
-        }
-        
-        .post-content code {
-            background: #f5f5f5;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        
-        .post-content img {
-            max-width: 100%;
-            height: auto;
-            margin: 32px 0;
-        }
-        
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 32px;
-            }
-            
-            .post-content {
-                font-size: 16px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>First Blog Post - Nell Norman</title>
+
+  <!-- Match index.html typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+    body {
+      font-family: 'Cardo', Georgia, serif;
+      background:#F9F6EE; color:#4B3621; min-height:100vh;
+
+      /* left-of-center layout to mirror index */
+      display:flex; justify-content:flex-start; align-items:flex-start;
+      padding:40px 20px;
+      padding-left: 15vw;
+      font-kerning: normal;
+      font-optical-sizing: auto;
+      line-height: 1.8;
+    }
+
+    .container { width:100%; max-width: 640px; }
+
+    .back-button {
+      font-size: 15px; color:#666; text-decoration:none; display:inline-block;
+      margin-bottom:18px; transition:opacity .2s ease;
+    }
+    .back-button:hover { opacity:.7; }
+
+    .post-header { margin-bottom: 24px; }
+    h1 { font-size: 34px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.2px; line-height: 1.2; }
+    .post-meta { font-size: 12px; color:#666; margin-bottom: 8px; }
+
+    .post-content {
+      font-size: 17px; color:#222;
+    }
+    .post-content p { margin-bottom: 14px; }
+    .post-content h2 { font-size: 26px; font-weight: 600; margin: 22px 0 12px; letter-spacing:-0.1px; color:#000; }
+    .post-content h3 { font-size: 20px; font-weight: 600; margin: 18px 0 10px; color:#000; }
+
+    .post-content a { color:#000; text-decoration: underline; text-underline-offset: 2px; transition: opacity .2s ease; }
+    .post-content a:hover { opacity:.7; }
+
+    .post-content ul, .post-content ol { margin-bottom: 14px; padding-left: 20px; }
+    .post-content li { margin-bottom: 6px; }
+
+    .post-content blockquote {
+      border-left: 3px solid #000; padding-left: 16px; margin: 16px 0; font-style: italic; color: #555;
+    }
+
+    .post-content pre {
+      background: #f5f5f5; padding: 18px; border-radius: 8px; overflow-x: auto; margin: 16px 0;
+      font-family: 'Courier New', monospace; font-size: 16px; color:#000;
+    }
+
+    .post-content code {
+      background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: .95em;
+    }
+
+    .post-content img { max-width: 100%; height: auto; margin: 24px 0; }
+
+    @media (max-width: 600px) {
+      body { padding-left: 8vw; }
+      .container { max-width: 92vw; }
+      h1 { font-size: 28px; margin-bottom: 8px; }
+      .post-content { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-button">← back to home</a>
-        
-        <article>
-            <div class="post-header">
-                <h1>wait for it !</h1>
-                <div class="post-meta">January 15, 2024</div>
-            </div>
-            
-            <div class="post-content">
-                <p>
-                    Until recently, building an artificial intelligence system that could hold a convincing phone conversation was a laborious task. You had to combine separate tools for speech recognition, language processing and speech synthesis, all linked through fragile telephony software.
+  <div class="container">
+    <a href="index.html#blog" class="back-button">← back to blog</a>
 
-                    This is no longer true. The arrival of real-time, speech-native AI models such as OpenAI’s RealTime API, launched last year, means a system that once required multiple components can now be created in minutes.
-                    
-                    Simple publicly available code can connect these models to a phone line. The AI model listens, “thinks” and responds in an instant. The result is a synthetic voice that can converse fluently, improvise naturally and sustain a dialogue in a way that feels human.
-                    
-                    In the past year we have moved from the theoretical possibility of widescale AI-enabled voice phishing — or vishing — scams to the reality. Last year, UK tech company Arup was defrauded of $25mn in a deepfake scam, while a vishing attack on Cisco succeeded in extracting information from a cloud-based customer relationship management system it used.
-                    
-                    What once demanded expert knowledge is now available, pre-packaged, for anyone to exploit. Low-latency voice-native models have removed the final technical barriers to real-time AI voice fraud.
-                    
-                    In testing, it took me only a few lines of instruction to make such a system act like an HR manager calling about the payroll or a fraud officer warning of suspicious activity. Because the AI can reason and change strategy in real time, its manipulation is adaptive.
-                    
-                    The technology itself has legitimate uses, such as healthcare follow-ups, customer service or language tutoring. But the same accessibility that enables innovation also enables harm. A single operator could in theory launch hundreds of thousands of fraudulent calls a day, each one tailored to their target.
-                    
-                    This threat is compounded by the increasing realism and low costs of platforms like Elevenlabs or Cartesia, which can facilitate voice cloning with very short audio samples.
-                    
-                    In the case of public figures, it is possible — and relatively easy — to gather hours of audio and produce a compelling approximation of their voice without their knowledge. Public officials have already been impersonated in such attacks, according to the FBI. It has warned the public not to assume that messages claiming to be from a senior US official are authentic.
-                    
-                    MIT’s Risk Repository, a database of over 1,600 AI risks, shows that in the last five years, the proportion of AI incidents associated with fraud has increased from around 9 per cent to around 48 per cent.
-                    
-                    The scale of this cyber crime means voice-verification systems that identify customers by their speech patterns are now a liability. Sensitive requests and high-value transactions should require multi-factor verification that does not depend on how someone sounds.
-                    
-                    For the rest of us, the lesson is simple: the voice on the other end of the line is no longer evidence of who is speaking. Just as we have learnt to treat emails with caution, we must today learn to doubt a human-sounding voice. In time, we may need to create vocal watermarks or digital signatures that verify speech as genuine.
-                    
-                    Debates around AI are sometimes framed in existential terms. But it is the smallest risks that will reach us first.
-                    
-                    Fraud and impersonation corrode trust in everyday communication. These supposedly mundane crimes are the front line of the AI transition. The same ingenuity that created the tools must be applied to securing them.
-                    
-                    The real disruption of generative AI — the quiet, invisible kind — has already arrived. It will not announce itself with superhuman intelligence but with a phone call.
-                    
-            </p>                          
-              
-            </div>
-        </article>
-    </div>
+    <article>
+      <div class="post-header">
+        <h1>We should all be a lot more concerned about voice fraud</h1>
+        <div class="post-meta">9 November 2025</div>
+      </div>
+
+      <div class="post-content">
+        <p>
+          Until recently, building an artificial intelligence system that could hold a convincing phone conversation was a laborious task. You had to combine separate tools for speech recognition, language processing and speech synthesis, all linked through fragile telephony software.
+        </p>
+        <p>
+          This is no longer true. The arrival of real-time, speech-native AI models such as OpenAI’s RealTime API, launched last year, means a system that once required multiple components can now be created in minutes.
+        </p>
+        <p>
+          Simple publicly available code can connect these models to a phone line. The AI model listens, “thinks” and responds in an instant. The result is a synthetic voice that can converse fluently, improvise naturally and sustain a dialogue in a way that feels human.
+        </p>
+        <p>
+          In the past year we have moved from the theoretical possibility of widescale AI-enabled voice phishing — or vishing — scams to the reality. Last year, UK tech company Arup was defrauded of $25mn in a deepfake scam, while a vishing attack on Cisco succeeded in extracting information from a cloud-based customer relationship management system it used.
+        </p>
+        <p>
+          What once demanded expert knowledge is now available, pre-packaged, for anyone to exploit. Low-latency voice-native models have removed the final technical barriers to real-time AI voice fraud.
+        </p>
+        <p>
+          In testing, it took me only a few lines of instruction to make such a system act like an HR manager calling about the payroll or a fraud officer warning of suspicious activity. Because the AI can reason and change strategy in real time, its manipulation is adaptive.
+        </p>
+        <p>
+          The technology itself has legitimate uses, such as healthcare follow-ups, customer service or language tutoring. But the same accessibility that enables innovation also enables harm. A single operator could in theory launch hundreds of thousands of fraudulent calls a day, each one tailored to their target.
+        </p>
+        <p>
+          This threat is compounded by the increasing realism and low costs of platforms like Elevenlabs or Cartesia, which can facilitate voice cloning with very short audio samples.
+        </p>
+        <p>
+          In the case of public figures, it is possible — and relatively easy — to gather hours of audio and produce a compelling approximation of their voice without their knowledge. Public officials have already been impersonated in such attacks, according to the FBI. It has warned the public not to assume that messages claiming to be from a senior US official are authentic.
+        </p>
+        <p>
+          MIT’s Risk Repository, a database of over 1,600 AI risks, shows that in the last five years, the proportion of AI incidents associated with fraud has increased from around 9 per cent to around 48 per cent.
+        </p>
+        <p>
+          The scale of this cyber crime means voice-verification systems that identify customers by their speech patterns are now a liability. Sensitive requests and high-value transactions should require multi-factor verification that does not depend on how someone sounds.
+        </p>
+        <p>
+          For the rest of us, the lesson is simple: the voice on the other end of the line is no longer evidence of who is speaking. Just as we have learnt to treat emails with caution, we must today learn to doubt a human-sounding voice. In time, we may need to create vocal watermarks or digital signatures that verify speech as genuine.
+        </p>
+        <p>
+          Debates around AI are sometimes framed in existential terms. But it is the smallest risks that will reach us first.
+        </p>
+        <p>
+          Fraud and impersonation corrode trust in everyday communication. These supposedly mundane crimes are the front line of the AI transition. The same ingenuity that created the tools must be applied to securing them.
+        </p>
+        <p>
+          The real disruption of generative AI — the quiet, invisible kind — has already arrived. It will not announce itself with superhuman intelligence but with a phone call.
+        </p>
+      </div>
+    </article>
+  </div>
 </body>
 </html>

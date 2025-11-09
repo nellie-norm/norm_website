@@ -112,7 +112,7 @@
       <nav>
         <a href="./about.html">about</a>
         <a href="./resume.pdf" target="_blank" rel="noopener">resum&eacute;</a>
-        <a id="nav-blog" href="./first-blog-post.html">blog</a>
+        <a id="nav-blog" href="./index.html#blog">blog</a>
         <a href="https://twitter.com/nellie_norm" target="_blank" rel="noopener">twitter</a>
         <a href="https://substack.com/@nellnorman" target="_blank" rel="noopener">substack</a>
         <a id="nav-contact" href="#contact">contact</a>
@@ -126,9 +126,9 @@
 
       <div class="blog-post">
         <h3><a href="./first-blog-post.html">We should all be a lot more concerned about voice fraud</a></h3>
-        <div class="blog-date">January 15, 2024</div>
+        <div class="blog-date">9 November 2025</div>
         <div class="blog-excerpt">
-          tbd
+          The barriers to AI-enabled mass fraud have collapsed. Our verification systems and expectations need to change accordingly. 
         </div>
       </div>
 
@@ -172,6 +172,16 @@
     if (navContact) {
       navContact.addEventListener('click', (e) => { e.preventDefault(); showContent('contact'); });
     }
+  
+    // On load, open the blog or contact section if hash present
+    window.addEventListener('DOMContentLoaded', () => {
+      if (location.hash === '#blog') {
+        showContent('blog');
+      } else if (location.hash === '#contact') {
+        showContent('contact');
+      }
+    });
   </script>
+
 </body>
 </html>
