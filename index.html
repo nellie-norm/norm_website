@@ -93,16 +93,6 @@
     .contact-info a { color:#000; transition:opacity .2s ease; }
     .contact-info a:hover { opacity:.7; }
 
-    /* Projects iframe container */
-    .project-frame {
-      width: 100%;
-      min-width: 800px;
-      height: 700px;
-      border: 1px solid #D4C8B8;
-      border-radius: 8px;
-      margin-top: 16px;
-    }
-
     /* Mobile */
     @media (max-width: 600px) {
       body { padding-left: 8vw; }
@@ -111,7 +101,6 @@
       nav a { font-size: 18px; }
       .emoji { font-size: 24px; }
       .content h2 { font-size: 22px; }
-      .project-frame { min-width: 100%; height: 500px; }
     }
   </style>
 </head>
@@ -124,7 +113,7 @@
         <a href="./about.html">about</a>
         <a href="./resume.pdf" target="_blank" rel="noopener">resum&eacute;</a>
         <a id="nav-blog" href="./index.html#blog">blog</a>
-        <a id="nav-projects" href="#projects">projects</a>
+        <a href="./projects.html">projects</a>
         <a href="https://twitter.com/nellie_norm" target="_blank" rel="noopener">twitter</a>
         <a id="nav-contact" href="#contact">contact</a>
       </nav>
@@ -143,19 +132,6 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- Projects Content -->
-    <div id="projects-content" class="content">
-      <a href="#" class="back-button" onclick="hideContent()">← back</a>
-      <h2>projects</h2>
-      <p>A multi-model fact checker that queries Claude, GPT-4o, and Perplexity simultaneously with real-time web search.</p>
-      <iframe 
-        class="project-frame"
-        src="https://factchecker-we5atzaaknaq3mgxtyn6xg.streamlit.app?embedded=true"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
     </div>
 
     <!-- Contact Content -->
@@ -187,10 +163,9 @@
     // Back button returns home
     window.addEventListener('popstate', function () { hideContent(); });
 
-    // Enhance blog/contact/projects to open in-page when JS is active
+    // Enhance blog/contact to open in-page when JS is active
     const navBlog = document.getElementById('nav-blog');
     const navContact = document.getElementById('nav-contact');
-    const navProjects = document.getElementById('nav-projects');
 
     if (navBlog) {
       navBlog.addEventListener('click', (e) => { e.preventDefault(); showContent('blog'); });
@@ -198,18 +173,13 @@
     if (navContact) {
       navContact.addEventListener('click', (e) => { e.preventDefault(); showContent('contact'); });
     }
-    if (navProjects) {
-      navProjects.addEventListener('click', (e) => { e.preventDefault(); showContent('projects'); });
-    }
   
-    // On load, open the section if hash present
+    // On load, open the blog or contact section if hash present
     window.addEventListener('DOMContentLoaded', () => {
       if (location.hash === '#blog') {
         showContent('blog');
       } else if (location.hash === '#contact') {
         showContent('contact');
-      } else if (location.hash === '#projects') {
-        showContent('projects');
       }
     });
   </script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects – Nell Norman</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      font-family: 'Cardo', Georgia, serif;
+      background:#F9F6EE; color:#4B3621; min-height:100vh;
+      display:flex; justify-content:flex-start; align-items:center;
+      padding:40px 20px;
+      padding-left: 15vw;
+      font-kerning: normal;
+      font-optical-sizing: auto;
+    }
+
+    .container { width:100%; max-width: 640px; }
+
+    .back-button {
+      font-size: 15px; color:#CC5500; text-decoration:none; display:inline-block;
+      margin-bottom:18px; transition:opacity .2s ease;
+    }
+    .back-button:hover { opacity:.6; }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      letter-spacing: -0.1px;
+    }
+
+    .project {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #e0d8c8;
+    }
+    .project:last-child { border-bottom: none; }
+
+    .project h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .project h2 a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity .2s ease;
+    }
+    .project h2 a:hover { opacity: .65; }
+
+    .project-meta {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #333;
+      max-width: 65ch;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      body { padding-left: 8vw; }
+      .container { max-width: 92vw; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="./index.html" class="back-button">← back</a>
+    <h1>projects</h1>
+
+    <div class="project">
+      <h2><a href="https://factchecker-we5atzaaknaq3mgxtyn6xg.streamlit.app" target="_blank" rel="noopener">Fact Checker</a></h2>
+      <div class="project-meta">2025 · Claude, GPT-4o, Perplexity</div>
+      <p>A multi-model fact verification tool that queries three LLMs simultaneously with real-time web search. Enter a claim and see how different models assess its accuracy, with source citations and confidence levels.</p>
+    </div>
+
+    <!-- Add more projects here -->
+    <!--
+    <div class="project">
+      <h2><a href="https://..." target="_blank" rel="noopener">Next Project</a></h2>
+      <div class="project-meta">2025 · Tech stack</div>
+      <p>Description...</p>
+    </div>
+    -->
+
+  </div>
+</body>
+</html>
